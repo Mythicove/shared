@@ -19,6 +19,7 @@ Mythicove 生态的共享 Go 模块。承载跨产品的能力**接口**与领�
 | `ratelimit` | 限流 | 进程内 | Redis |
 | `queue` | 任务队列 | 内联执行 | asynq（Redis） |
 | `mailer` | 邮件 | SMTP | 服务商 API |
+| `i18n` | 国际化 | go-i18n（Go）/ i18next（TS） | — |
 | `mc` | Minecraft 领域 | 离线 UUID、玩家名校验等纯函数 | — |
 
 ## 本地联调
