@@ -22,9 +22,10 @@ func UUIDString(u [16]byte) string {
 	return fmt.Sprintf("%x-%x-%x-%x-%x", u[0:4], u[4:6], u[6:8], u[8:10], u[10:16])
 }
 
-// UUIDFromName 返回离线玩家名对应的 UUID 字符串。
+// UUIDFromName 返回离线玩家名对应的 UUID（无连字符 hex，符合 Yggdrasil/Mojang 约定）。
 func UUIDFromName(name string) string {
-	return UUIDString(OfflineUUID(name))
+	u := OfflineUUID(name)
+	return fmt.Sprintf("%x", u[:])
 }
 
 var namePattern = regexp.MustCompile(`^[A-Za-z0-9_]{3,16}$`)
