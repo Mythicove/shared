@@ -16,6 +16,7 @@ Mythicove 生态的共享 Go 模块。承载跨产品的能力**接口**与领�
 | `search` | 搜索 | PostgreSQL `pg_trgm` | Meilisearch |
 | `cache` | 缓存 | 进程内内存 | Redis |
 | `ratelimit` | 限流 | 进程内固定窗口（`ratelimit.Memory`，已内置） | Redis（待实现） |
+| `clientip` | 客户端 IP 解析 | 可信代理感知（`clientip.Resolver`，头序/代理网段可配，已内置） | — |
 | `queue` | 任务队列 | 内联执行 | asynq（Redis） |
 | `mailer` | 邮件 | SMTP | 服务商 API |
 | `i18n` | 国际化 | go-i18n（Go）/ i18next（TS） | — |
