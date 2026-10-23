@@ -19,6 +19,6 @@ type Search interface {
 	Index(ctx context.Context, index string, docs []Document) error
 	// Delete 从索引中删除单条文档。
 	Delete(ctx context.Context, index string, id string) error
-	// Query 全文检索，返回命中的文档 ID 列表。
-	Query(ctx context.Context, index, q string, facets map[string][]string, limit, offset int) ([]string, error)
+	// Query 全文检索，返回命中的文档 ID 列表与总命中数（分页 total 用）。
+	Query(ctx context.Context, index, q string, facets map[string][]string, limit, offset int) (ids []string, total int64, err error)
 }
