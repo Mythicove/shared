@@ -33,4 +33,4 @@ go work use . ../mythic-mirror ../mythic-hoard
 
 ## 许可证
 
-[AGPL-3.0](./LICENSE)（核心产品代码，与产品仓库一致）。
+[Elastic License 2.0 (ELv2)](./LICENSE)（核心产品代码，与产品仓库一致）。
