@@ -17,10 +17,13 @@ The shared Go module of the Mythicove ecosystem. It holds cross-product capabili
 | storage | Object storage | Local disk | MinIO, then S3 (R2, OSS) |
 | search | Search | PostgreSQL pg_trgm | Meilisearch |
 | cache | Cache | In-process memory | Redis |
-| ratelimit | Rate limiting | In-process fixed window (ratelimit.Memory, built in) | Redis (planned) |
+| ratelimit | Rate limiting | In-process fixed window (ratelimit.Memory, built in) | Redis (product repos implement the interface in internal/redislimit) |
 | clientip | Client IP resolution | Trusted-proxy aware (clientip.Resolver, configurable header order and proxy CIDRs, built in) | none |
 | queue | Task queue | Inline execution | asynq (Redis) |
 | mailer | Email | SMTP | Provider API |
+| captcha | CAPTCHA | Multi-driver verification (Turnstile, reCAPTCHA, hCaptcha, Cap) | same |
+| cdn | CDN purge | Hook interface | per-provider implementation |
+| oauth | Third-party OAuth | GitHub/Microsoft profile normalization | same |
 | i18n | Internationalization | go-i18n (Go), i18next (TS) | none |
 | mc | Minecraft domain | Pure functions: offline UUIDs, player name validation | none |
 

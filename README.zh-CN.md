@@ -17,10 +17,13 @@ Mythicove 生态的共享 Go 模块，承载跨产品的能力接口与领域类
 | storage | 对象存储 | 本地磁盘 | MinIO，再到 S3（R2、OSS） |
 | search | 搜索 | PostgreSQL pg_trgm | Meilisearch |
 | cache | 缓存 | 进程内内存 | Redis |
-| ratelimit | 限流 | 进程内固定窗口（ratelimit.Memory，已内置） | Redis（待实现） |
+| ratelimit | 限流 | 进程内固定窗口（ratelimit.Memory，已内置） | Redis（各产品仓 internal/redislimit 实现接口） |
 | clientip | 客户端 IP 解析 | 可信代理感知（clientip.Resolver，头序和代理网段可配，已内置） | 无 |
 | queue | 任务队列 | 内联执行 | asynq（Redis） |
 | mailer | 邮件 | SMTP | 服务商 API |
+| captcha | 验证码 | 多驱动校验（Turnstile、reCAPTCHA、hCaptcha、Cap） | 同左 |
+| cdn | CDN 刷新 | 钩子接口 | 按服务商实现 |
+| oauth | 第三方 OAuth | GitHub/Microsoft profile 归一 | 同左 |
 | i18n | 国际化 | go-i18n（Go）、i18next（TS） | 无 |
 | mc | Minecraft 领域 | 离线 UUID、玩家名校验等纯函数 | 无 |
 
