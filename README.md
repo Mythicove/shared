@@ -35,6 +35,8 @@ go work use . ../mythic-mirror ../mythic-hoard
 
 ## License
 
-[Elastic License 2.0 (ELv2)](./LICENSE). Core product code, consistent with the product repositories.
+[Elastic License 2.0 (ELv2)](./LICENSE). Core product code, consistent with the product repositories: source-available, not OSI open source. The licensing philosophy and intended-use FAQ live on the docs site: [English](https://docs.gov.skin/en/community/licensing/) · [中文](https://docs.gov.skin/community/licensing/).
+
+Importing, modifying and redistributing this module are all free, including in commercial self-hosted deployments; ELv2 only restricts offering the software itself to third parties as a hosted/managed service, circumventing license keys, and removing notices. For permissive-license integration points, see the [api](https://github.com/Mythicove/api) repository (MIT).
 
 The repository was released under AGPL-3.0 (v0.1.1, v0.1.2) and moved to ELv2 on 2026-10-26. See [LICENSE.history](./LICENSE.history) for the history and what it means, including which license applies to old versions on the Go module proxy.

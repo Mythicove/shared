@@ -35,6 +35,8 @@ go work use . ../mythic-mirror ../mythic-hoard
 
 ## 许可证
 
-[Elastic License 2.0 (ELv2)](./LICENSE)，核心产品代码，与产品仓库一致。
+[Elastic License 2.0 (ELv2)](./LICENSE)，核心产品代码，与产品仓库一致：源码可得，非 OSI 开源。许可理念与预期用法 FAQ 见文档站：[中文](https://docs.gov.skin/community/licensing/) · [English](https://docs.gov.skin/en/community/licensing/)。
+
+引用、修改、再分发本模块全部免费，包括商业自部署；ELv2 只限制三件事：把软件本身作为托管/管理服务提供给第三方、绕过 license key、移除版权声明。宽松许可的接入点见 [api](https://github.com/Mythicove/api) 仓库（MIT）。
 
 本仓库曾以 AGPL-3.0 发布（v0.1.1、v0.1.2），2026-10-26 起换证为 ELv2。历史与影响（含 Go module proxy 旧版本归属）见 [LICENSE.history](./LICENSE.history)。
