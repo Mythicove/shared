@@ -12,6 +12,7 @@ type Cache interface {
 	// Get 返回键对应的值；不存在时 ok 为 false。
 	Get(ctx context.Context, key string) (val []byte, ok bool, err error)
 	// Set 写入带 TTL 的键值。
+	// ttl <= 0 表示不过期（与 Redis SET 不带 TTL 的语义一致）。
 	Set(ctx context.Context, key string, val []byte, ttl time.Duration) error
 	// Delete 删除键。
 	Delete(ctx context.Context, key string) error

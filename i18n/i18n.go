@@ -11,9 +11,3 @@ type Localizer interface {
 	// Plural 处理复数形式。
 	Plural(ctx context.Context, locale, key string, n int, args map[string]any) string
 }
-
-// DefaultLocale 是缺省回退 locale。
-const DefaultLocale = "en-US"
-
-// Locales 是起步支持的 locale 列表（BCP 47）。
-var Locales = []string{"zh-CN", "en-US"}

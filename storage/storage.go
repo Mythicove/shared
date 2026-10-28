@@ -10,7 +10,8 @@ import (
 
 // Object 是一次上传的输入。
 type Object struct {
-	Key         string
+	Key string
+	// Size 是对象字节数。实现方应尊重 Size（用于 Content-Length）；hoard 的 S3 实现已设置。
 	Size        int64
 	ContentType string
 	Body        io.Reader
